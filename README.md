@@ -1,5 +1,4 @@
 # DataLith #
-* A web-scraper game.
 * DataLith uses the AngularJS framework to provide a web application frontend interface and the flask python framework to provide the backend functionality.
 * The site can be found at: ec2-18-219-217-158.us-east-2.compute.amazonaws.com:4000/ or 18.219.217.158:4000
 

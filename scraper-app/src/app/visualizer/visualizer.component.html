@@ -1,0 +1,24 @@
+<div id="visualizer">
+  <div id="visualizer_info">
+    <p>
+      The <span class="tool_name">{{toolType}}</span> returned the following results from <span class="url_string">{{ crawlData['url'] }}</span>
+    </p>
+  </div>
+
+  <div id="result">
+    <p *ngIf="toolType === 'Handaxe'">
+      <span id="metric">Ratio of Broken Links to Active Links</span>
+      <span id="data">{{ crawlData['brokenRatio'] }}</span>
+    </p>
+
+    <p *ngIf="toolType === 'Hook'">
+      <span id="metric">Mean Load Time of Links</span>
+      <span id="data">{{ crawlData['meanTime'] }}</span>
+    </p>
+
+    <app-collage
+      *ngIf="toolType === 'Grindstone'"
+      [crawlData]="crawlData"
+    ></app-collage>
+  </div>
+</div>

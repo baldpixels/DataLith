@@ -1,0 +1,31 @@
+{
+  "brokenRatio": "0.0",
+  "top5": [
+    [
+      "test",
+      0.5,
+      "www.bing.com"
+    ],
+    [
+      "test",
+      0.34,
+      "www.google.com"
+    ],
+    [
+      "test",
+      0.34,
+      "www.google.com"
+    ],
+    [
+      "test",
+      0.19,
+      "www.google.com"
+    ],
+    [
+      "test",
+      0.01,
+      "www.yahoo.com"
+    ]
+  ],
+  "url": "www.atlantic.com"
+}

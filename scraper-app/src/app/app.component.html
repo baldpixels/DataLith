@@ -1,0 +1,41 @@
+<div id="wrapper">
+  <h1>
+    DataLith
+  </h1>
+
+  <div id="options">
+    <button *ngIf="!choosingTool" (click)="returnToToolSelect()">new tool</button>
+    <button *ngIf="!choosingTool" (click)="returnToUrlSubmit()">new URL</button>
+  </div>
+
+  <app-tools
+    *ngIf="choosingTool"
+    [tools]="tools"
+    [chosenTool]="chosenTool"
+    [toolIsChosen]="toolIsChosen"
+    (onUrlSubmit)="storeUrl($event)"
+    (onToolAction)="submitAction($event)"
+    (onUsernameSubmit)="storeUsername($event)">
+  </app-tools>
+
+  <app-loader
+    *ngIf="loadingResults"
+    [toolType]="toolType"
+    [urlString]="urlString"
+    [username]="username"
+    (onDoneLoading)="displayResults($event)">
+  </app-loader>
+
+  <app-visualizer
+    *ngIf="dataReady"
+    [crawlData]="crawlData"
+    [toolType]="toolType">
+  </app-visualizer>
+
+  <app-scoreboard
+    *ngIf="dataReady && (toolType === 'Handaxe' || toolType === 'Hook')"
+    [crawlData]="crawlData"
+    [toolType]="toolType">
+  </app-scoreboard>
+
+</div>

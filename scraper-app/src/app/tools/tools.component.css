@@ -1,0 +1,105 @@
+#toolBelt {
+  width: 100%;
+  display: inline-block;
+}
+
+#active_tool {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+
+.activeToolIcon {
+  width: 100%;
+}
+
+#inactive_tools {
+  position: fixed;
+  left: 3px;
+  top: 3px;
+  width: 100px;
+}
+
+.inactiveToolIcon {
+  width: 90px;
+  float: left;
+}
+
+.tool {
+  position: relative;
+  width: 300px;
+  display: inline-block;
+  margin: 12px 12px 0 12px;
+}
+
+.toolIcon {
+  position: relative;
+  z-index: +1;
+  width: 100%;
+}
+
+#handaxe {
+
+}
+
+#hook {
+
+}
+
+#grindstone {
+
+}
+
+.tool_details {
+  position: relative;
+  top: -16px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #a4a0aa;
+  /*
+  font-family: Palatino, "Palatino", serif;
+  */
+  margin: 0 0 12px 0;
+  padding: 6px 0 6px 0;
+  width: 50%;
+  background-color: black;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+}
+
+.tool_details h3 {
+  margin: 0;
+  padding: 0;
+  font-family: Optima, "Optima", sans-serif;
+  font-size: 24px;
+  font-weight: lighter;
+  font-variant: small-caps;
+}
+
+.tool_details p {
+  font-family: Perpetua, Baskerville, Big Caslon, Palatino Linotype, Palatino, URW Palladio L, Nimbus Roman No9 L, serif;
+  font-weight: lighter;
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+  padding: 6px;
+}
+
+.tool_details button {
+  z-index: +1;
+  width: 50%;
+  margin: 6px 0 6px 0;
+  padding: 3px;
+  border-radius: 6px;
+  font-family: Helvetica, "Helvetica", sans-serif;
+  font-weight: lighter;
+  font-size: 12px;
+  box-shadow: 0 3px 1px #4b484f;
+}
+
+.tool_details button:active {
+  transform: translate(0, 3px);
+  box-shadow: 0 1px 1px;
+}

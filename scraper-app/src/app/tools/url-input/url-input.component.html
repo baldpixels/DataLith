@@ -1,0 +1,5 @@
+<input id="url_form" #urlInput type="url" placeholder="Now enter a URL..." />
+
+<app-username-input
+  (onButtonClick)="sendUsername($event); sendUrl(urlInput.value)">
+></app-username-input>

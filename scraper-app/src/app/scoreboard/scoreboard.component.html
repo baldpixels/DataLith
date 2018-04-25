@@ -1,0 +1,8 @@
+<div id="scoreboard">
+  <h3><span class="tool_name">{{toolType}} </span>Leaderboard:</h3>
+  <ol>
+    <li *ngFor="let leader of crawlData['top5']">
+      when <span id="username">{{ leader[0] }}</span> crawled <span class="url_string">{{ leader[2] }}</span> (score = {{ leader[1] }})
+    </li>
+  </ol>
+</div>

@@ -1,0 +1,37 @@
+h1 {
+  color: #fff;
+  /*
+  font-family: Futura, "Futura", sans-serif;
+  font-family: Helvetica, "Helvetica", sans-serif;
+  */
+  font-family: Optima, "Optima", sans-serif;
+  font-size: 48px;
+  font-weight: lighter;
+  font-variant: small-caps;
+  text-decoration: underline;
+}
+
+#wrapper {
+  text-align: center;
+}
+
+#options {
+  text-align: center;
+  width: 100%;
+  margin: 6px 0 6px 0;
+}
+
+#options button {
+  margin: 0 6px 0 6px;
+  padding: 6px;
+  border-radius: 6px;
+  font-family: Helvetica, "Helvetica", sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  box-shadow: 0 3px 1px;
+}
+
+#options button:active {
+  transform: translate(0, 3px);
+  box-shadow: 0 1px 1px;
+}

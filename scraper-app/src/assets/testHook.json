@@ -1,0 +1,31 @@
+{
+  "meanTime": "693.6491799354553",
+  "top10": [
+    [
+      "test",
+      729.837,
+      "www.yahoo.com"
+    ],
+    [
+      "test",
+      699.649,
+      "www.yahoo.com"
+    ],
+    [
+      "test",
+      693.649,
+      "www.yahoo.com"
+    ],
+    [
+      "test",
+      474.292,
+      "www.google.com"
+    ],
+    [
+      "test",
+      464.879,
+      "www.google.com"
+    ]
+  ],
+  "url": "www.yahoo.com"
+}

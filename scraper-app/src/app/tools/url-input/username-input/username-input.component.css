@@ -1,0 +1,42 @@
+#username_form {
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+#username_form input {
+  display: inline;
+  width: 48%;
+  min-width: 270px;
+  max-width: 480px;
+  height: 24px;
+  margin: 0;
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 15px;
+  font-family: Helvetica, "Helvetica", sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  color: #807b87;
+  box-shadow: 3px 3px 3px #000;
+}
+
+#username_form button {
+  z-index: +1;
+  width: auto;
+  margin: 0 0 0 6px;
+  padding: 6px;
+  border-radius: 6px;
+  font-family: Helvetica, "Helvetica", sans-serif;
+  font-weight: lighter;
+  font-size: 12px;
+  box-shadow: 0 3px 1px #4b484f;
+}
+
+#username_form button:active {
+  transform: translate(0, 3px);
+  box-shadow: 0 1px 1px;
+}

@@ -1,0 +1,53 @@
+<div *ngIf="toolIsChosen" id="active_tool">
+  <img *ngIf="chosenTool == tools[0]" class="activeToolIcon" id="handaxe" src="/assets/images/handaxe.png">
+  <img *ngIf="chosenTool == tools[1]" class="activeToolIcon" id="hook" src="/assets/images/hook.png">
+  <img *ngIf="chosenTool == tools[2]" class="activeToolIcon" id="grindstone" src="/assets/images/grindstone.png">
+</div>
+
+<div *ngIf="toolIsChosen" id="inactive_tools">
+  <img *ngIf="chosenTool != tools[0]" (click)="toolIsChosen = false; hideAllDetails(); unsetAllImages(); tools[0].toggleDetails(); tools[0].toggleImage()" class="inactiveToolIcon" id="handaxe" src="/assets/images/handaxe.png">
+  <img *ngIf="chosenTool != tools[1]" (click)="toolIsChosen = false; hideAllDetails(); unsetAllImages(); tools[1].toggleDetails(); tools[1].toggleImage()" class="inactiveToolIcon" id="hook" src="/assets/images/hook.png">
+  <img *ngIf="chosenTool != tools[2]" (click)="toolIsChosen = false; hideAllDetails(); unsetAllImages(); tools[2].toggleDetails(); tools[2].toggleImage()" class="inactiveToolIcon" id="grindstone" src="/assets/images/grindstone.png">
+</div>
+
+<div *ngIf="!toolIsChosen" id="toolBelt">
+  <div class="tool">
+    <img [@toolImage]="tools[0].image" (click)="hideAllDetails(); unsetAllImages(); tools[0].toggleDetails(); tools[0].toggleImage()" class="toolIcon" id="handaxe" src="/assets/images/handaxe.png">
+    <div [@toolDetails]="tools[0].details" class="tool_details" id="handaxe_details">
+      <span class="tool_name">Handaxe</span>
+      <p>
+        The Handaxe scours a website for dead links, chopping them off as it goes. (i.e. It returns the ratio of dead links to active links.)
+      </p>
+      <button (click)="chooseTool(tools[0])" type="button">select</button>
+    </div>
+  </div>
+
+  <div class="tool">
+    <img [@toolImage]="tools[1].image" (click)="hideAllDetails(); unsetAllImages(); tools[1].toggleDetails(); tools[1].toggleImage()" class="toolIcon" id="hook" src="/assets/images/hook.png">
+    <div [@toolDetails]="tools[1].details" class="tool_details" id="hook_details">
+      <span class="tool_name">Hook</span>
+      <p>
+        The Hook fishes for links, realing them in as fast as it can. (i.e. It returns the mean time required to load a website's links.)
+      </p>
+      <button (click)="chooseTool(tools[1])" type="button">select</button>
+    </div>
+  </div>
+
+  <div class="tool">
+    <img [@toolImage]="tools[2].image" (click)="hideAllDetails(); unsetAllImages(); tools[2].toggleDetails(); tools[2].toggleImage()" class="toolIcon" id="grindstone" src="/assets/images/grindstone.png">
+    <div [@toolDetails]="tools[2].details" class="tool_details" id="grindstone_details">
+      <span class="tool_name">Grindstone</span>
+      <p>
+        The Grindstone pounds a website's images into a flat mold. (i.e. It returns a collage of the site's images.)
+      </p>
+      <button (click)="chooseTool(tools[2])" type="button">select</button>
+    </div>
+  </div>
+</div>
+
+<app-url-input
+  *ngIf = "toolIsChosen"
+  [chosenTool] = "chosenTool"
+  (onUrlSubmit)="toolAction($event)"
+  (onUsernameSubmit)="sendUsername($event)">
+</app-url-input>
